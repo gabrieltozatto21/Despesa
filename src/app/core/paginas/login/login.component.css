@@ -1,0 +1,30 @@
+.container-fluid {
+  padding: 0px;
+  height: 100vh;
+}
+
+.form_login {
+  width: 85%;
+}
+
+.form_login a {
+  text-decoration: none;
+}
+
+.cont_left {
+  height: 100%;
+  padding: 0px 10px;
+}
+
+.btn-entrar {
+  width: 100%;
+  background: #183884;
+  color: #FFF;
+}
+
+.cont_right {
+  height: 100%;
+  padding: 0px 30px;
+  background: #183884;
+  color: #FFF;
+}

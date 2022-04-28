@@ -1,3 +1,8 @@
 export const environment = {
-  production: true
+  production: true,
+  config: {
+    apis: {
+      despesa: "https://dddnhibernateapi.azurewebsites.net/api/"
+    }
+  }
 };

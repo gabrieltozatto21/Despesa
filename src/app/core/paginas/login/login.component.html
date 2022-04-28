@@ -1,0 +1,49 @@
+<div class="container-fluid d-flex align-items-center">
+  <div class="cont_left col-4 d-flex align-items-center justify-content-end">
+      <form [formGroup]="loginForm"  (submit)="enviar()" autocomplete="off" class="form_login">
+          <p>Realize seu login para continuar</p>
+
+          <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                  <i class="bi bi-person-fill"></i>
+              </span>
+              <input
+                  formControlName="Login"
+                  type="text"
+                  class="form-control"
+                  placeholder="Usuário"
+                  aria-label="Usuario"
+                  aria-describedby="basic-addon1"
+              >
+          </div>
+
+          <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon2">
+                  <i class="bi bi-key-fill"></i>
+              </span>
+              <input
+                  formControlName="Senha"
+                  type="password"
+                  class="form-control"
+                  placeholder="Senha"
+                  aria-label="Senha"
+                  aria-describedby="basic-addon2"
+              >
+          </div>
+
+          <button type="submit" [disabled]="loginForm.invalid" class="btn btn-entrar">Entrar</button>
+          <!-- <a href="#">Esqueceu sua senha?</a> -->
+      </form>
+  </div>
+
+  <div class="cont_right col-8 d-flex align-items-center">
+      <div class="col">
+          <span>SEJA BEM-VINDO (A)</span>
+          <h1>DESPESA ANOTAÇÕES</h1>
+      </div>
+  </div>
+</div>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type="square-jelly-box" [fullScreen] ="true">
+  <p class="text-white" > Logando... </p>
+</ngx-spinner>
