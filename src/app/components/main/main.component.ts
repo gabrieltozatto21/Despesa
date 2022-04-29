@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SessaoService } from 'src/app/libs/core/services/sessao.service';
 
 @Component({
   selector: 'app-main',
@@ -7,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sessaoService: SessaoService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  logout(){}
+  logout(): void {
+		this.sessaoService.remover();
+		this.router.navigateByUrl("/login");
+	}
 }
