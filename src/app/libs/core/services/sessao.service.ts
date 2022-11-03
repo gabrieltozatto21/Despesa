@@ -14,10 +14,10 @@ export class SessaoService {
     this.cookiesService.set('infoUsuario', JSON.stringify(sessao), 1, '/', "", false, "Lax");
   }
 
-  recuperar(): Sessao {
+  recuperar(): any {
       const cookie = this.recuperarCookie();
-
-      return cookie ? new Sessao(cookie) : new Sessao({});
+      // return cookie ? new Sessao(cookie) : new Sessao({});
+      return cookie;
   }
 
   remover(): void {

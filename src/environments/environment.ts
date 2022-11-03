@@ -7,6 +7,9 @@ export const environment = {
   config: {
     apis: {
       despesa: "http://localhost:5000/api/"
+    },
+    hubs: {
+      notificacao: "http://localhost:5000/notificacao-hub/"
     }
   }
 };
