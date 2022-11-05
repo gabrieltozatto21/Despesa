@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit {
        }
 
     })
-    .configureLogging(signalR.LogLevel.Trace)
+    .configureLogging(signalR.LogLevel.None)
     .build();
 
     this._hubConnection

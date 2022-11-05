@@ -84,3 +84,9 @@ a {
   background: #FFF;
   color: #000;
 }
+
+.nome{
+  color: white;
+  padding-right: 5px;
+  margin: 0;
+}
