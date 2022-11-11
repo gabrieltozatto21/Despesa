@@ -66,21 +66,15 @@ a {
   font-size: 20px;
 }
 
-.nav span {
-  margin-left: 10px;
-  margin-bottom: 5px;
-  color: #ffffff;
-}
-
-.bi {
+.logout, .sino-notificacoes {
   border-radius: 5px;
-  padding: 3px 10px;
+  margin: 3px 10px;
   font-size: 20px;
   color: white;
   cursor: pointer;
 }
 
-.bi:hover {
+.logout:hover {
   background: #FFF;
   color: #000;
 }
@@ -89,4 +83,10 @@ a {
   color: white;
   padding-right: 5px;
   margin: 0;
+}
+
+.badge{
+  font-size: 8px;
+  right: -4px;
+  top: 2px;
 }

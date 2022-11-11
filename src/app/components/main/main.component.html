@@ -9,8 +9,18 @@
       <ul class="ul">
       </ul>
 
+    <div class="d-flex align-items-center">
+      <div class="d-flex">
+        <i class="bi bi-bell sino-notificacoes position-relative">
+          <span class="position-absolute badge rounded-pill bg-danger">
+            1
+          </span>
+        </i>
+      </div>
+
       <p class="nome">{{ usuario }}</p>
-      <i class="bi bi-box-arrow-right" (click)="logout()"></i>
+      <i class="bi bi-box-arrow-right logout" (click)="logout()"></i>
+    </div>
     </div>
 
   </div>
