@@ -6,16 +6,18 @@
         <b>Anotações</b>
       </div>
 
-      <ul class="ul">
-      </ul>
-
     <div class="d-flex align-items-center">
-      <div class="d-flex">
-        <i class="bi bi-bell sino-notificacoes position-relative">
-          <span class="position-absolute badge rounded-pill bg-danger">
-            1
+      <div class="dropdown">
+        <i class="bi bi-bell sino-notificacoes position-relative dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" appDropdownOnHover [menu]="dropDownMenu">
+          <span *ngIf="qtdNotificacoes" class="position-absolute badge rounded-pill bg-danger">
+            {{ qtdNotificacoes }}
           </span>
         </i>
+
+        <ul class="dropdown-menu" #dropDownMenu>
+          <li><a class="dropdown-item" href="#">Adicionar nova notificação</a></li>
+          <app-mensagem [notificacoes]="notificacoes"></app-mensagem>
+        </ul>
       </div>
 
       <p class="nome">{{ usuario }}</p>

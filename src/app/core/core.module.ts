@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from 'src/app/core/paginas/inicio/inicio.component';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpsRequestInterceptorModule } from '../libs/core/interceptors/HttpsRequestInterceptor/httpsRequestInterceptor.module';
 
 
 
@@ -22,6 +23,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(),
+    HttpsRequestInterceptorModule
   ]
 })
 export class CoreModule { }
