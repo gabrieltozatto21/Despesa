@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './components/main/main.component'
 import { DropdownOnHoverOnHoverModule } from './shared/directives/dropdown-on-hover.module';
 import { MensagemModule } from './libs/components/mensagem/mensagem.module';
+import { DespesaListagemComponent } from './despesas/paginas/despesa-listagem/despesa-listagem.component';
 
 @NgModule({
   declarations: [

@@ -21,8 +21,12 @@ const rotas: Routes = [
     children: [
       {
         path: 'inicio',
-        canActivate: [AutenticacaoGuard],
+        // canActivate: [AutenticacaoGuard],
         component: InicioComponent
+      },
+      {
+        path: 'despesas',
+        loadChildren: () => import('../despesas/despesas.module').then(m => m.DespesasModule)
       }
     ]
   }

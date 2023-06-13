@@ -1,0 +1,38 @@
+<div class="row border ">
+    <div class="d-inline-flex">
+        <div class="col-sm-1 m-1">
+            <ng-select class="form-control border border-dark" [items]="operadores" bindLabel="name" bindValue="id"></ng-select>
+        </div>
+        <button class="m-1 btn btn-primary" (click)="adicionarClausula()">Adicionar</button>
+        <button class="m-1 btn btn-primary" (click)="adicionarGrupo()">Adicionar Grupo</button>
+        <button class="m-1 btn btn-danger" (click)="remover()">Remover Grupo</button>
+    </div>
+
+    <div *ngFor="let regra of regras.controls; let i = index">
+        <div 
+        class="m-3"
+        *ngIf="!!regra.get('Condicao'); else gridClausulas">
+            <app-query-builder 
+             [grupoRaiz]="regra"
+            (onRemoveGrupo)="removerGrupo(i)"></app-query-builder>
+        </div>
+
+        <ng-template #gridClausulas>
+            <div class="col-md-8 m-3">
+                <div class="d-flex justify-content-between">
+                    <div class="col-md-1">
+                        <ng-select class="form-control" [items]="operadores" bindLabel="name" bindValue="id"></ng-select>
+                    </div>
+                    <input class="form-control" type="text">
+                    <div class="col-md-2">
+                        <ng-select class="form-control" [items]="juncoes" bindLabel="name" bindValue="id"></ng-select>
+                    </div>
+                    <input class="form-control" type="text">
+    
+                    <button class="btn btn-danger" (click)="removerClausula(i)"><i
+                            class="bi bi-dash-circle-fill"></i></button>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
